@@ -7,6 +7,4 @@ public class Employee {
 	private Double salary;
 	
 	// constructors, getters, setters, toString etc 
-
-
 }
