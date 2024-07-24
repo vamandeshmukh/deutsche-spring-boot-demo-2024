@@ -9,5 +9,4 @@ public class DeutscheSpringBootDemoApplication {
 	public static void main(String[] args) {
 		SpringApplication.run(DeutscheSpringBootDemoApplication.class, args);
 	}
-
 }
