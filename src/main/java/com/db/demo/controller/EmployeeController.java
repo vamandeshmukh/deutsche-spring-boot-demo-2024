@@ -1,5 +1,7 @@
 package com.db.demo.controller;
 
+import java.util.List;
+
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RestController;
@@ -21,13 +23,14 @@ public class EmployeeController {
 		return obj;
 	}
 	
-//	getAllEmps 
+
+	//	getAllEmps 
 	
-//	addEmp 
-	
-//	updateEmp 
-	
-//	deleteEmp 
+////	addEmp 
+//	
+////	updateEmp 
+//	
+////	deleteEmp 
 	
 
 }
