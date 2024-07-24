@@ -8,9 +8,10 @@ import com.db.demo.model.Employee;
 @RestController
 public class EmployeeController {
 
-	@GetMapping("emp/eid")
+	@GetMapping("emp/{eid}")
 	public Employee getEmpById(Integer eid) {
 		Employee obj = new Employee(eid, "Sonu", 90000.50);
+		System.out.println(obj.toString());
 		return obj;
 	}
 
