@@ -6,6 +6,6 @@ public class Employee {
 	private String firstName;
 	private Double salary;
 	
-	
+	// constructors, getters, setters, toString etc 
 
 }
