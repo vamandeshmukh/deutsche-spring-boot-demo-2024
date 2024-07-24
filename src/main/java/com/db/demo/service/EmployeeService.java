@@ -24,7 +24,8 @@ public class EmployeeService implements IEmployeeService {
 
 	@Override
 	public List<Employee> getAllEmployees() {
-		return null;
+		System.out.println("getAllEmployees");
+		return empList;
 	}
 
 	@Override

@@ -24,6 +24,11 @@ public class EmployeeController {
 		return empService.getEmployeeById(id);
 	}
 
+	@GetMapping("emp")
+	public List<Employee> getAllEmps() {
+		System.out.println("getAllEmps");
+		return empService.getAllEmployees();
+	}
 
 	// getAllEmps
 
