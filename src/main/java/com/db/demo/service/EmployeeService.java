@@ -10,13 +10,16 @@ import com.db.demo.model.Employee;
 @Service
 public class EmployeeService implements IEmployeeService {
 
-
-	private List<Employee> empList =  Arrays.asList(new Employee(101, "Sonu", 90.50),
-			new Employee(102, "Monu", 95.75), (new Employee(103, "Tonu", 92.25)));
+	private List<Employee> empList = Arrays.asList(new Employee(101, "Sonu", 90.50), new Employee(102, "Monu", 95.75),
+			new Employee(103, "Tonu", 92.25));
 
 	@Override
 	public Employee getEmployeeById(Integer id) {
-		return empList.stream().filter(e -> e.getId().equals(id)).findFirst().get();
+		System.out.println("getEmployeeById " + id);
+		return empList.stream()
+                .filter(e -> e.getId().equals(id))
+                .findFirst()
+                .orElse(null); 
 	}
 
 	@Override
