@@ -11,40 +11,45 @@ import com.db.demo.repository.EmployeeRepository;
 @Service
 public class EmployeeService implements IEmployeeService {
 
+//	private final org.slf4j.Logger LOG = org.slf4j.LoggerFactory.getLogger(this.getClass());
+	private final org.slf4j.Logger LOG = org.slf4j.LoggerFactory.getLogger(this.getClass());
+
 	@Autowired
 	private EmployeeRepository empRepository;
 
 	@Override
 	public Employee getEmployeeById(Integer id) {
-		System.out.println("getEmployeeById " + id);
-//		empRepository.
+		LOG.info(id.toString());
 		return empRepository.findById(id).get();
 	}
 
 	@Override
 	public List<Employee> getAllEmployees() {
-		System.out.println("getAllEmployees");
+		LOG.info("getAllEmployees");
 		return empRepository.findAll();
 	}
 
 	@Override
 	public List<Employee> getEmployeeByName(String name) {
+		LOG.info(name);
 		return empRepository.findByFirstName(name);
 	}
 
 	@Override
 	public Employee addEmployee(Employee employee) {
-		System.out.println(employee.toString());
+		LOG.info(employee.toString());
 		return empRepository.save(employee);
 	}
 
 	@Override
 	public Employee updateEmployee(Employee employee) {
+		LOG.info(employee.toString());
 		return null;
 	}
 
 	@Override
 	public Employee deleteEmployee(Integer id) {
+		LOG.info(id.toString());
 		return null;
 	}
 
