@@ -22,7 +22,7 @@ public class EmployeeController {
 		return empService.getAllEmployees();
 	}
 
-	//	http://localhost:8080/emp/101
+	// http://localhost:8080/emp/101
 
 	@GetMapping("emp/{id}")
 	public Employee getEmpById(@PathVariable(name = "id") Integer id) {
@@ -30,7 +30,13 @@ public class EmployeeController {
 		return empService.getEmployeeById(id);
 	}
 
-//	getEmpByName
+	@GetMapping("emp/{name}")
+	public List<Employee> getEmpByName(@PathVariable(name = "name") String name) {
+		System.out.println("getEmpByName " + name);
+		return empService.getEmployeeByName(name);
+	}
+
+	// getEmpByName
 
 	// getAllEmps
 

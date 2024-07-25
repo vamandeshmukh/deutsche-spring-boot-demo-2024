@@ -14,11 +14,12 @@ public interface EmployeeRepository extends JpaRepository<Employee, Integer> {
 //	no need to write methods for basic CRUD operations 
 
 //	https://docs.spring.io/spring-data/jpa/docs/current-SNAPSHOT/reference/html/#reference
-	
+
 	public abstract List<Employee> findByFirstName(String firstName);
-	
+
 //	@Query("SELECT * FROM Employee")
 //	public abstract List<Employee> findBySomeThingElse(String firstName);
-	
+
+	public abstract List<Employee> findByLastnameAndSalaryBetween(String firstName, Double salary1, Double Salary2);
 
 }
