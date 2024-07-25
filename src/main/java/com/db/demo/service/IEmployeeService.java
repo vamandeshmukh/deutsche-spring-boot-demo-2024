@@ -2,6 +2,8 @@ package com.db.demo.service;
 
 import java.util.List;
 
+import org.springframework.stereotype.Service;
+
 import com.db.demo.model.Employee;
 
 public interface IEmployeeService {

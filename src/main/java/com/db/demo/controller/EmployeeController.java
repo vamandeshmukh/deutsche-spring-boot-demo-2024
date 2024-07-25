@@ -8,13 +8,13 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.db.demo.model.Employee;
-import com.db.demo.service.EmployeeService;
+import com.db.demo.service.IEmployeeService;
 
 @RestController
 public class EmployeeController {
 
 	@Autowired
-	EmployeeService empService;
+	private IEmployeeService empService;
 
 //	http://localhost:8080/emp/101
 

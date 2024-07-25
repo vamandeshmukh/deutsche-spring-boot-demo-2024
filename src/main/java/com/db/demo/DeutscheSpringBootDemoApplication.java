@@ -10,3 +10,17 @@ public class DeutscheSpringBootDemoApplication {
 		SpringApplication.run(DeutscheSpringBootDemoApplication.class, args);
 	}
 }
+
+/**
+ * JDBC
+ * 
+ * ORM - concept for better JDBC    
+ * 
+ * JPA - specification based on ORM 
+ * 
+ * Hibernate - implementation of JPA 
+ * 
+ * Spring Data JPA - implementation of JPA 
+ * 
+ * 
+ **/
