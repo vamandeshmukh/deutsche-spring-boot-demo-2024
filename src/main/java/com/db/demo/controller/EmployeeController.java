@@ -16,7 +16,13 @@ public class EmployeeController {
 	@Autowired
 	private IEmployeeService empService;
 
-//	http://localhost:8080/emp/101
+	@GetMapping("emp")
+	public List<Employee> getAllEmps() {
+		System.out.println("getAllEmps");
+		return empService.getAllEmployees();
+	}
+
+	//	http://localhost:8080/emp/101
 
 	@GetMapping("emp/{id}")
 	public Employee getEmpById(@PathVariable(name = "id") Integer id) {
@@ -24,11 +30,7 @@ public class EmployeeController {
 		return empService.getEmployeeById(id);
 	}
 
-	@GetMapping("emp")
-	public List<Employee> getAllEmps() {
-		System.out.println("getAllEmps");
-		return empService.getAllEmployees();
-	}
+//	getEmpByName
 
 	// getAllEmps
 

@@ -8,7 +8,7 @@ import jakarta.persistence.Table;
 @Table(name = "employees")
 public class Employee {
 
-	@Id
+	@Id // primary key
 	private Integer id;
 	private String firstName;
 	private Double salary;

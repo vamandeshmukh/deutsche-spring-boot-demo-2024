@@ -17,6 +17,7 @@ public class EmployeeService implements IEmployeeService {
 	@Override
 	public Employee getEmployeeById(Integer id) {
 		System.out.println("getEmployeeById " + id);
+//		empRepository.
 		return empRepository.findById(id).get(); 
 	}
 
@@ -27,8 +28,8 @@ public class EmployeeService implements IEmployeeService {
 	}
 
 	@Override
-	public Employee getEmployeeByName(String name) {
-		return null;
+	public List<Employee> getEmployeeByName(String name) {
+		return empRepository.findByFirstName(name) ;
 	}
 
 	@Override

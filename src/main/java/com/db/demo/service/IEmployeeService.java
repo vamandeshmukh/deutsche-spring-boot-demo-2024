@@ -12,7 +12,7 @@ public interface IEmployeeService {
 
 	public abstract Employee getEmployeeById(Integer id);
 	
-	public abstract Employee getEmployeeByName(String name);
+	public abstract List<Employee> getEmployeeByName(String name);
 
 	public abstract Employee addEmployee(Employee employee);
 	
