@@ -18,7 +18,7 @@ public class EmployeeService implements IEmployeeService {
 	public Employee getEmployeeById(Integer id) {
 		System.out.println("getEmployeeById " + id);
 //		empRepository.
-		return empRepository.findById(id).get(); 
+		return empRepository.findById(id).get();
 	}
 
 	@Override
@@ -29,12 +29,13 @@ public class EmployeeService implements IEmployeeService {
 
 	@Override
 	public List<Employee> getEmployeeByName(String name) {
-		return empRepository.findByFirstName(name) ;
+		return empRepository.findByFirstName(name);
 	}
 
 	@Override
 	public Employee addEmployee(Employee employee) {
-		return null;
+		System.out.println(employee.toString());
+		return empRepository.save(employee);
 	}
 
 	@Override
@@ -48,7 +49,6 @@ public class EmployeeService implements IEmployeeService {
 	}
 
 }
-
 
 //package com.db.demo.service;
 //
