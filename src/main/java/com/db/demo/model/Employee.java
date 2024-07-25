@@ -1,6 +1,8 @@
 package com.db.demo.model;
 
 import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.Table;
 
@@ -8,7 +10,8 @@ import jakarta.persistence.Table;
 @Table(name = "employees")
 public class Employee {
 
-	@Id // primary key
+	@Id
+	@GeneratedValue(strategy = GenerationType.AUTO)
 	private Integer id;
 	private String firstName;
 	private Double salary;
@@ -19,11 +22,11 @@ public class Employee {
 		super();
 	}
 
-	public Employee(String firstName, Double salary) {
-		super();
-		this.firstName = firstName;
-		this.salary = salary;
-	}
+//	public Employee(String firstName, Double salary) {
+//		super();
+//		this.firstName = firstName;
+//		this.salary = salary;
+//	}
 
 	public Employee(Integer id, String firstName, Double salary) {
 		super();
