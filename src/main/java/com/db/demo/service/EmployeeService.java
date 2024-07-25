@@ -2,6 +2,8 @@ package com.db.demo.service;
 
 import java.util.List;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -12,7 +14,7 @@ import com.db.demo.repository.EmployeeRepository;
 public class EmployeeService implements IEmployeeService {
 
 //	private final org.slf4j.Logger LOG = org.slf4j.LoggerFactory.getLogger(this.getClass());
-	private final org.slf4j.Logger LOG = org.slf4j.LoggerFactory.getLogger(this.getClass());
+	private final Logger LOG = LoggerFactory.getLogger(this.getClass());
 
 	@Autowired
 	private EmployeeRepository empRepository;

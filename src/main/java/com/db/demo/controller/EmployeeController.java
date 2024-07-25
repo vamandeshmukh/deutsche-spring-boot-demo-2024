@@ -15,12 +15,14 @@ import com.db.demo.service.IEmployeeService;
 @RestController
 public class EmployeeController {
 
+	private final org.slf4j.Logger LOG = org.slf4j.LoggerFactory.getLogger(this.getClass());
+
 	@Autowired
 	private IEmployeeService empService;
 
 	@GetMapping("emp")
 	public List<Employee> getAllEmps() {
-		System.out.println("getAllEmps");
+		LOG.info("getAllEmps");
 		return empService.getAllEmployees();
 	}
 
@@ -28,19 +30,19 @@ public class EmployeeController {
 
 	@GetMapping("emp/{id}")
 	public Employee getEmpById(@PathVariable(name = "id") Integer id) {
-		System.out.println("getEmpById " + id);
+		LOG.info(id.toString());
 		return empService.getEmployeeById(id);
 	}
 
 	@GetMapping("emp/name/{name}")
 	public List<Employee> getEmpByName(@PathVariable(name = "name") String name) {
-		System.out.println("getEmpByName " + name);
+		LOG.info(name);
 		return empService.getEmployeeByName(name);
 	}
 
 	@PostMapping("emp/")
 	public Employee addEmp(@RequestBody Employee employee) {
-		System.out.println(employee.toString());
+		LOG.info(employee.toString());
 		return empService.addEmployee(employee);
 	}
 
